@@ -5,7 +5,7 @@ Luis Eduardo Sánchez González
 
 II Escuela de Verano de Física Computacional
  
-Repositorio: 
+Repositorio: https://github.com/Luis2501/Ejercicios-IIEVFC
 """
 import numpy as np
 

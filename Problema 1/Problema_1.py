@@ -1,5 +1,5 @@
 """
-Movimientos acoplados (Problema 5)
+Movimiento de Kepler (Problema 1)
 
 Luis Eduardo Sánchez González
 
@@ -7,7 +7,7 @@ II Escuela de Verano de Física Computacional
 
 lun 19 abr 2021 21:29:18 CDT 
  
-Repositorio: 
+Repositorio: https://github.com/Luis2501/Ejercicios-IIEVFC
 """
 import sys
 import numpy as np

@@ -1,5 +1,5 @@
 """
-Movimientos acoplados (Problema 5)
+Carga total de cilindro (Problema 4)
 
 Luis Eduardo Sánchez González
 
@@ -7,7 +7,7 @@ II Escuela de Verano de Física Computacional
 
 lun 19 abr 2021 21:29:18 CDT 
  
-Repositorio: 
+Repositorio: https://github.com/Luis2501/Ejercicios-IIEVFC
 """
 import numpy as np
 
