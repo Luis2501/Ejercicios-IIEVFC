@@ -26,6 +26,8 @@ class Aro:
 
 if __name__ == "__main__":
 	
+	import sys
+	sys.path.append("../")
 	import matplotlib.pyplot as plt
 	from PhysicsPy.ODEsMethods import *
 
@@ -33,13 +35,21 @@ if __name__ == "__main__":
 
 	Conditions = [np.pi/40, 1, np.pi/20, 1, np.pi/10, 1]
 
-	Solucion = Runge_Kutta(aro)
-	Solucion.InitialConditions(Conditions, [0, 5], 1e-3)
-	Phi, t = Solucion.SolveODE()
+	fig, (ax1,ax2) = plt.subplots(1, 2, figsize = (9,4.5))
 
-	for k in range(0, 6, 2):
+	for solver_class, Fig, n in zip([Euler, Runge_Kutta], [ax1, ax2] , ["Euler", "Runge_Kutta"]):
 
-		plt.plot(t, Phi[:,k], label = f"$\phi_{k + 1}$")
+		Solucion = solver_class(aro)
+		Solucion.InitialConditions(Conditions, [0, 5], 1e-3)
+		Phi, t = Solucion.SolveODE()
+
+		Fig.set_title("Método de " + n)
+
+		for k in range(0, 6, 2):
+
+			Fig.plot(t, Phi[:,k], label = f"$\phi_{k + 1} (t)$")
 	
-	plt.legend(fancybox=True) ; plt.grid()
+		Fig.set_xlabel("tiempo (s)") ; Fig.set_ylabel("$\phi$")
+		Fig.legend(fancybox=True) ; Fig.grid()
+	
 	plt.show()
